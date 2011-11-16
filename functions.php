@@ -4,6 +4,11 @@
  * @subpackage HTML5_Boilerplate
  */
 
+// Disable WordPress version reporting as a basic protection against automatic attacks
+function remove_generators() {
+  return '';
+}
+
 // Custom HTML5 Comment Markup
 function mytheme_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
