@@ -12,7 +12,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
