@@ -30,7 +30,7 @@ function mytheme_comment($comment, $args, $depth) {
 <?php
 }
 
-automatic_feed_links();
+add_theme_support( 'automatic-feed-links' );
 
 // Widgetized Sidebar HTML5 Markup
 if ( function_exists('register_sidebar') ) {
@@ -66,4 +66,11 @@ function versioned_resource($relative_url){
   }
 
   return $relative_url.$file_version;
+
 }
+
+function add_post_formats() {
+	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video'));
+}
+add_post_formats();
+?>

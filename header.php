@@ -5,12 +5,14 @@
  */
 ?>
 <!doctype html>
-<html lang="en" class="no-js">
+<body <?php body_class(); ?>>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
-
-  <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-  <!--[if IE]><![endif]-->
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
@@ -36,9 +38,6 @@
   <!-- CSS : implied media="all" -->
   <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/style.css") ?>
 
-  <!-- For the less-enabled mobile browsers like Opera Mini -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/handheld.css", 'media="handheld"') ?>
-
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/modernizr-1.5.min.js") ?>
 
@@ -49,13 +48,7 @@
 
 </head>
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-
-<!--[if lt IE 7 ]> <body <?php body_class('ie6'); ?>> <![endif]-->
-<!--[if IE 7 ]>    <body <?php body_class('ie7'); ?>> <![endif]-->
-<!--[if IE 8 ]>    <body <?php body_class('ie8'); ?>> <![endif]-->
-<!--[if IE 9 ]>    <body <?php body_class('ie9'); ?>> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <body <?php body_class('ie6'); ?>> <!--<![endif]-->
+<body <?php body_class(); ?>>
 
   <div id="container">
     <header role="banner">
